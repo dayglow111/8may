@@ -60,3 +60,74 @@ After digitization, various operations become possible:
 - **Signal filtering**
 
 ![width:700](image.png)
+
+---
+
+## Today we use DSP techniques to suppress vocals from music.
+
+### Core Idea
+
+Vocals mainly occupy specific frequency regions.
+
+To reduce vocals, we:
+
+1. Convert the audio into the frequency domain using STFT
+2. Detect the frequency range where vocals are strong
+3. Suppress those frequencies
+4. Reconstruct the audio signal
+
+---
+
+### Step 1 — Sampling
+
+The original analog sound wave is sampled into discrete-time data.
+
+---
+
+### Step 2 — STFT
+
+We applied STFT (Short-Time Fourier Transform).
+
+```python
+f, t, Zxx = stft(x, fs)
+```
+---
+
+### Step 3 — Frequency Masking
+
+We created a mask to suppress vocal-dominant frequencies.
+
+```python
+mask[(f > 300) & (f < 3400)] *= 0.2
+```
+
+\[
+Y(k,t)=M(k,t)X(k,t)
+\]
+
+- \(M(k,t)\): frequency mask
+- Vocal frequency energy becomes weaker
+
+---
+
+### Step 4 — Filtering
+
+The mask was applied to the spectrum.
+
+```python
+Z_filtered = Zxx * mask
+```
+
+Unwanted frequency components are attenuated while preserving other parts of the music signal.
+
+---
+
+### Step 5 — ISTFT Reconstruction
+
+We reconstructed the processed signal back into the time domain.
+
+
+
+The processed audio can now be played back as sound.
+
+![width:700](result.png)
