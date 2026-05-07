@@ -8,24 +8,6 @@
 - Primarily focused on **electric power**
 - Large voltage, large current, and energy transmission
 
-### Major Fields
-- Power generation
-- Transmission and distribution systems
-- Electric machines and motors
-- Power electronics
-- Electrical facilities and infrastructure
-
-### Characteristics
-- High voltage / high power
-- Energy efficiency
-- Industrial infrastructure oriented
-
-### Examples
-- Power plants
-- Transformers
-- EV charging infrastructure
-- Smart grids
-
 ---
 
 ## Electronic Engineering
