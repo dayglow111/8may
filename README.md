@@ -1,4 +1,4 @@
-# Electrical Engineering vs. Electronic Engineering
+# ㅎㅇㅎㅇ
 
 ---
 
@@ -16,39 +16,47 @@
 - Primarily focused on **information processing**
 - Small voltage, small current, and signal manipulation
 
-### Major Fields
-- Semiconductors
-- Embedded systems
-- Communications
-- Digital Signal Processing (DSP)
-- IC / SoC design
-
-### Characteristics
-- Low power / high integration
-- Signal and data processing
-- Strong connection with computers and AI
-
 ### Examples
 - Smartphone processors
 - CPU / GPU
 - Sensors
 - Wireless communication systems
 
+### Major Fields
+- Semiconductors
+- Embedded systems
+- Communications
+- **Digital Signal Processing (DSP)**
+- IC / SoC design
+
+### Characteristics
+- Low power / high integration
+- Signal and data processing
+- **Strong connection with computers and AI**
+
 ---
 
-# Key Difference Summary
+## Sound as a Signal
 
-| Electrical Engineering | Electronic Engineering |
-|---|---|
-| Energy transmission | Information processing |
-| High power systems | Low power systems |
-| Generation & transmission | Semiconductors & communication |
-| Large voltage/current | Small electrical signals |
-| Power systems | Digital systems |
+Sound is a type of signal.
 
----
+In the real world, sound is delivered through vibrations of air pressure.
+These vibrations travel as continuous analog waves.
 
-# One-Sentence Summary
+Computers, however, cannot directly process continuous physical signals.
+Therefore, the analog sound signal must first be converted into a digital form.
 
-> Electrical Engineering focuses on delivering electrical energy,  
-> while Electronic Engineering focuses on processing information using electricity.
+This process is called **sampling**.
+
+During sampling, the continuous-time signal \(x(t)\) is measured at discrete time intervals. \(x[t]\)
+
+The sampled values are then represented as numbers, allowing computers and digital systems to process audio using DSP algorithms.
+
+After digitization, various operations become possible:
+- Noise reduction
+- Audio compression
+- Voice recognition
+- Music processing
+- **Signal filtering**
+
+![width:700](image.png)
