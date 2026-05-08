@@ -90,11 +90,6 @@ We applied STFT (Short-Time Fourier Transform).
 
 We created a mask to suppress vocal-dominant frequencies.
 
-```python
-mask[(f > 300) & (f < 3400)] *= 0.2
-```
-
-- \(M(k,t)\): frequency mask
 - Vocal frequency energy becomes weaker
 
 ---
