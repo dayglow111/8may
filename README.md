@@ -6,7 +6,7 @@
 
 ---
 
-## Electronic Engineering
+## Electronics
 
 ### Core Focus
 - Primarily focused on **information processing**
