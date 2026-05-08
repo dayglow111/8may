@@ -1,7 +1,3 @@
-# ㅎㅇㅎㅇ
-
----
-
 ## Electrical Engineering
 
 ### Core Focus
