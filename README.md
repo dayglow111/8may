@@ -84,9 +84,6 @@ The original analog sound wave is sampled into discrete-time data.
 
 We applied STFT (Short-Time Fourier Transform).
 
-```python
-f, t, Zxx = stft(x, fs)
-```
 ---
 
 ### Step 3 — Frequency Masking
@@ -97,10 +94,6 @@ We created a mask to suppress vocal-dominant frequencies.
 mask[(f > 300) & (f < 3400)] *= 0.2
 ```
 
-\[
-Y(k,t)=M(k,t)X(k,t)
-\]
-
 - \(M(k,t)\): frequency mask
 - Vocal frequency energy becomes weaker
 
@@ -109,10 +102,6 @@ Y(k,t)=M(k,t)X(k,t)
 ### Step 4 — Filtering
 
 The mask was applied to the spectrum.
-
-```python
-Z_filtered = Zxx * mask
-```
 
 Unwanted frequency components are attenuated while preserving other parts of the music signal.
 
